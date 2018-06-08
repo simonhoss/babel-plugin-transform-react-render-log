@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-react-render-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds console.log to all component render methods",
   "main": "src/index.js",
   "keywords": [
