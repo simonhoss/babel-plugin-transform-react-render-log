@@ -27,8 +27,6 @@ module.exports = function testPlugin(babel) {
           ) {
             const className = classPath.node.id.name;
 
-            console.log(`"${className}"`);
-
             path
               .get("body")
               .unshiftContainer("body", generateTemplate(className));
@@ -53,7 +51,6 @@ module.exports = function testPlugin(babel) {
           if (firstArgument && firstArgument.type === "Identifier") {
             className = firstArgument.name;
           }
-          console.log(`"${className}"`);
           path
             .get("body")
             .unshiftContainer("body", generateTemplate(className));
