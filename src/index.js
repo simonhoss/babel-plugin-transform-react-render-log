@@ -2,10 +2,12 @@ const template = require("babel-template");
 
 function generateTemplate(className) {
   return template(`
-console.group('${className} render');
-console.log(this.props);
-console.log(this.state);
-console.groupEnd('render');
+  if(console.group && console.groupEnd) {
+    console.group('${className} render');
+    console.log(this.props);
+    console.log(this.state);
+    console.groupEnd('render');
+  }
 `)();
 }
 const fs = require("fs");
